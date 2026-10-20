@@ -1,4 +1,8 @@
-const Home = ({ user }) => {
+import { useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
+
+const Home = () => {
+  const { user } = useContext(UserContext);
   return (
     <div className="component-container">
       <h2>Home Component</h2>

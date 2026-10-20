@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { UserContext } from "../contexts/UserContext";
 
-const UpdateProfile = ({ setUser }) => {
+const UpdateProfile = () => {
+  const { setUser } = useContext(UserContext);
   const [userProfile, setUserProfile] = useState({
     name: "John Doe",
     email: "john.doe@test.com",

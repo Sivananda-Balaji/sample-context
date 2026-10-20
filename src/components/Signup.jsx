@@ -1,4 +1,8 @@
-const Signup = ({ user, setUser }) => {
+import { useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
+
+const Signup = () => {
+  const { user, setUser } = useContext(UserContext);
   const handleSignup = () => {
     setUser({ name: "Alice", email: "alice@test.com" });
   };
